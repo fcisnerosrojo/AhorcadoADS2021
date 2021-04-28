@@ -11,11 +11,14 @@ namespace Hangman_App.Clases
         public static int LivesLeft { get; set; }
         public static int Coins { get; set; }
         public static char[] GuessingWord { get; set; }
-        public static char[] LettersSecretWord { get; set; }
+        public static List<char> LettersSecretWord { get; set; }
+        public static List<char> EnteredLetters { get; set; }
 
 
         public static void GenerateGuessingWord(string secretWord)
         {
+            EnteredLetters = new List<char>();
+
             GuessingWord = new char[secretWord.Length];
 
             for (int i = 0; i < GuessingWord.Length; i++)
@@ -28,12 +31,32 @@ namespace Hangman_App.Clases
 
         public static void RecorrerGuessingWord(string letra)
         {
-            for (int i = 0; i < LettersSecretWord.Length; i++)
+            for (int i = 0; i < LettersSecretWord.Count; i++)
             {
                 if (LettersSecretWord[i].ToString() == letra)
                 {
                     GuessingWord[i] = char.Parse(letra);
                 }
+            }
+        }
+
+
+
+        public static bool CheckGivenLetter(char letter)
+        {
+            if (EnteredLetters.Contains(letter))
+            {
+                return false;
+            }
+            else if (LettersSecretWord.Contains(letter))
+            {
+                EnteredLetters.Add(letter);
+
+                return true;
+            }
+            else
+            {
+                return true;
             }
         }
 
@@ -54,9 +77,29 @@ namespace Hangman_App.Clases
 
         public static string GiftLetter()
         {
-            int index = new Random().Next(LettersSecretWord.Length);
+            int cantVueltas = 0;
+
+            int index = new Random().Next(LettersSecretWord.Count);
 
             string giftedLetter = LettersSecretWord.ElementAt(index).ToString();
+
+            while (EnteredLetters.Contains(char.Parse(giftedLetter)))
+            {
+                index = new Random().Next(LettersSecretWord.Count);
+
+                giftedLetter = LettersSecretWord.ElementAt(index).ToString();
+
+                cantVueltas += 1;
+
+                if (cantVueltas > 30)
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine("cantidad de Vueltas: " + cantVueltas);
+
+            EnteredLetters.Add(char.Parse(giftedLetter));
 
             RecorrerGuessingWord(giftedLetter);
 

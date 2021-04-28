@@ -34,15 +34,23 @@ namespace Hangman_App
             }
             else
             {
-                string letraIngresada = Guess.Text;
+                string letraIngresada = Guess.Text.ToLower();
 
-                if (secretWord.Contains(letraIngresada))
+                bool check = Match.CheckGivenLetter(char.Parse(letraIngresada));
+
+                if (secretWord.Contains(letraIngresada) && check)
                 {
                     Match.RecorrerGuessingWord(letraIngresada);
 
-                    DisplayGuessingWord();
+                    DisplayWord(new string(Match.GuessingWord));
 
-                    DisplayAlert("Exito!", "La letra '" + Guess.Text + "' esta contenida dentro de la palabra secreta!", "Ok");
+                    DisplayAlert("Exito!", "La letra '" + letraIngresada + "' esta contenida dentro de la palabra secreta!", "Ok");
+                }
+                else if (!(check))
+                {
+                    DisplayAlert("Error", "La letra '" + letraIngresada + "' ya ha sido ingresada", "Ok");
+
+                    Match.LivesLeft -= 1;
                 }
                 else
                 {
@@ -51,22 +59,8 @@ namespace Hangman_App
                     Match.LivesLeft -= 1;
                 }
 
-                if (Match.CheckWin())
-                {
-                    Won();
-                }
-                else if (Match.LivesLeft == 0)
-                {
-                    Lost();
-                }
-                else
-                {
-                    lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
 
-                    Guess.Text = "";
-
-                    Guess.Focus();
-                }
+                MatchState();
             }
         }
 
@@ -80,11 +74,10 @@ namespace Hangman_App
             
             Match.GenerateGuessingWord(secretWord);
 
-            string word = new string(Match.GuessingWord);
+            Match.LettersSecretWord = new List<char>(secretWord.ToCharArray());
 
-            Match.LettersSecretWord = secretWord.ToCharArray();
+            DisplayWord(new string(Match.GuessingWord));
 
-            lblSecretWord.Text = word;
             lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
             lblMonedasRestantes.Text = "Monedas Restantes: " + Match.Coins.ToString();
 
@@ -103,11 +96,13 @@ namespace Hangman_App
             {
                 string giftedLetter = Match.GiftLetter();
 
-                DisplayGuessingWord();
+                DisplayWord(new string(Match.GuessingWord));
 
                 lblMonedasRestantes.Text = "Monedas Restantes: " + Match.Coins.ToString();
 
                 DisplayAlert("Gifted Letter", "La letra regalada es '" + giftedLetter + "'", "Ok");
+
+                MatchState();
             }
             else
             {
@@ -118,11 +113,40 @@ namespace Hangman_App
         }
 
 
-        private void DisplayGuessingWord()
+        private void DisplayWord(string word)
         {
-            string palabraAdivinada = new string(Match.GuessingWord);
+            char[] displayedWord = word.ToCharArray();
 
-            lblSecretWord.Text = palabraAdivinada;
+            for (int i = 0; i < displayedWord.Length + 1; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    displayedWord = Generic.InsertArray(displayedWord, char.Parse(" "), i);
+                }
+            }
+
+            lblSecretWord.Text = new string(displayedWord);
+        }
+
+
+        private void MatchState()
+        {
+            if (Match.CheckWin())
+            {
+                Won();
+            }
+            else if (Match.LivesLeft == 0)
+            {
+                Lost();
+            }
+            else
+            {
+                lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
+
+                Guess.Text = "";
+
+                //Guess.Focus();
+            }
         }
 
 
@@ -146,7 +170,7 @@ namespace Hangman_App
         {
             btnPlay.IsEnabled = true;
 
-            lblSecretWord.Text = "_ _ _ _";
+            DisplayWord(secretWord);
 
             btnGuess.IsEnabled = false;
 
@@ -156,6 +180,7 @@ namespace Hangman_App
             btnGift.IsEnabled = false;
 
             lblVidasRestantes.Text = "Vidas Restantes: ";
+            lblMonedasRestantes.Text = "Monedas Restantes: ";
 
             btnPlay.Focus();
         }
