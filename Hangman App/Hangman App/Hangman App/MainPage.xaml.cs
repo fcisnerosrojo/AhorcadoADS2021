@@ -13,12 +13,6 @@ namespace Hangman_App
     {
         string secretWord;
 
-        int livesLeft;
-        int coins;
-
-        char[] guessingWord;
-        char[] lettersSecretWord;
-
 
         public MainPage()
         {
@@ -32,11 +26,6 @@ namespace Hangman_App
         }
 
 
-        public int LivesLeft { get => livesLeft; set => livesLeft = value; }
-        public int Coins { get => coins; set => coins = value; }
-
-
-
         private void Button_Clicked_Guess(object sender, EventArgs e)
         {
             if (Guess.Text.Length > 1 || Guess.Text.Length == 0)
@@ -47,9 +36,9 @@ namespace Hangman_App
             {
                 string letraIngresada = Guess.Text;
 
-                if (secretWord.Contains(Guess.Text))
+                if (secretWord.Contains(letraIngresada))
                 {
-                    RecorrerGuessingWord(letraIngresada);
+                    Match.RecorrerGuessingWord(letraIngresada);
 
                     DisplayGuessingWord();
 
@@ -59,20 +48,20 @@ namespace Hangman_App
                 {
                     DisplayAlert("Fracaso..", "La letra ingresada no se encuentra en la palabra secreta", "Ok");
 
-                    livesLeft -= 1;
+                    Match.LivesLeft -= 1;
                 }
 
-                if (CheckWin())
+                if (Match.CheckWin())
                 {
                     Won();
                 }
-                else if (livesLeft == 0)
+                else if (Match.LivesLeft == 0)
                 {
                     Lost();
                 }
                 else
                 {
-                    lblVidasRestantes.Text = "Vidas Restantes: " + livesLeft.ToString();
+                    lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
 
                     Guess.Text = "";
 
@@ -82,23 +71,22 @@ namespace Hangman_App
         }
 
 
-
         private void Button_Clicked_Play(object sender, EventArgs e)
         {
-            livesLeft = 5;
-            coins = 2;
+            Match.LivesLeft = 5;
+            Match.Coins = 2;
 
             secretWord = WordGenerator.WordGetter();
+            
+            Match.GenerateGuessingWord(secretWord);
 
-            GenerateGuessingWord();
+            string word = new string(Match.GuessingWord);
 
-            string word = new string(guessingWord);
-
-            lettersSecretWord = secretWord.ToCharArray();
+            Match.LettersSecretWord = secretWord.ToCharArray();
 
             lblSecretWord.Text = word;
-            lblVidasRestantes.Text = "Vidas Restantes: " + livesLeft.ToString();
-            lblMonedasRestantes.Text = "Monedas Restantes: " + coins.ToString();
+            lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
+            lblMonedasRestantes.Text = "Monedas Restantes: " + Match.Coins.ToString();
 
             btnPlay.IsEnabled = false;
             btnGift.IsEnabled = true;
@@ -109,52 +97,32 @@ namespace Hangman_App
         }
 
 
-
-
-        private void GenerateGuessingWord()
+        private void btnGift_Clicked(object sender, EventArgs e)
         {
-            guessingWord = new char[secretWord.Length];
-
-            for (int i = 0; i < guessingWord.Length; i++)
+            if (Match.Coins > 0)
             {
-                guessingWord[i] = char.Parse("_");
+                string giftedLetter = Match.GiftLetter();
+
+                DisplayGuessingWord();
+
+                lblMonedasRestantes.Text = "Monedas Restantes: " + Match.Coins.ToString();
+
+                DisplayAlert("Gifted Letter", "La letra regalada es '" + giftedLetter + "'", "Ok");
+            }
+            else
+            {
+                DisplayAlert("Error", "No dispones de mas monedas!", "Ok");
+
+                btnGift.IsEnabled = false;
             }
         }
-
-
-
-        private void RecorrerGuessingWord(string letra)
-        {
-            for (int i = 0; i < lettersSecretWord.Length; i++)
-            {
-                if (lettersSecretWord[i].ToString() == letra)
-                {
-                    guessingWord[i] = char.Parse(letra);
-                }
-            }
-        }
-
 
 
         private void DisplayGuessingWord()
         {
-            string palabraAdivinada = new string(guessingWord);
+            string palabraAdivinada = new string(Match.GuessingWord);
 
             lblSecretWord.Text = palabraAdivinada;
-        }
-
-
-        private bool CheckWin()
-        {
-            foreach (char letra in guessingWord)
-            {
-                if (letra.ToString() == "_")
-                {
-                    return false;
-                }
-            }
-
-            return true;
         }
 
 
@@ -193,30 +161,6 @@ namespace Hangman_App
         }
 
 
-        private void btnGift_Clicked(object sender, EventArgs e)
-        {
-            if (coins > 0)
-            {
-                int index = new Random().Next(lettersSecretWord.Length);
-
-                string giftedLetter = lettersSecretWord.ElementAt(index).ToString();
-
-                RecorrerGuessingWord(giftedLetter);
-
-                DisplayGuessingWord();
-
-                coins -= 1;
-
-                lblMonedasRestantes.Text = "Monedas Restantes: " + coins.ToString();
-
-                DisplayAlert("Gifted Letter", "La letra regalada es '" + giftedLetter + "'", "Ok");
-            }
-            else
-            {
-                DisplayAlert("Error", "No dispones de mas monedas!", "Ok");
-
-                btnGift.IsEnabled = false;
-            }
-        }
+        
     }
 }
