@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "326qhPGQ70izb48bJxSVGXymerRxuoo7TvESZAC4ucsczCAhnQTBPDGQye2GJCHL6DcO6+apWzMTIVlVPeL8ig==",
+  "dgSpecHash": "J/lwq0xwkUSXJxdK2vmNG9bNIEHkZi72X4rU6s4zrgGW2P/iKkTtGTioU041zjavXddqLuZpKDm6043CNW7BGA==",
   "success": true,
   "projectFilePath": "D:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.Android\\Hangman App.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nikom\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\nikom\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.activity\\1.1.0.5\\xamarin.androidx.activity.1.1.0.5.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.androidx.annotation\\1.1.0.8\\xamarin.androidx.annotation.1.1.0.8.nupkg.sha512",

@@ -190,9 +190,25 @@ namespace Hangman_App
         }
 
 
+        private async void ConnectMicroService()
+        {
+            int cantPalabras = 5;
+
+            string url = $"http://127.0.0.1:5001/hangman/api/v1.0/match/{cantPalabras}";
+
+            var service = new HttpHelper<string>();
+
+            var secretWords = await service.GetRestServiceDataAsync(url);
+
+            DisplayAlert("JSON", "Hola: " + secretWord, "Ok");
+        }
+
+
         private void btnQuit_Clicked(object sender, EventArgs e)
         {
             Resetter();
+
+            ConnectMicroService();
         }
     }
 }

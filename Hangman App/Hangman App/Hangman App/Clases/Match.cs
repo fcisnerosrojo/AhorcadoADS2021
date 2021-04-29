@@ -97,8 +97,6 @@ namespace Hangman_App.Clases
                 }
             }
 
-            Console.WriteLine("cantidad de Vueltas: " + cantVueltas);
-
             EnteredLetters.Add(char.Parse(giftedLetter));
 
             RecorrerGuessingWord(giftedLetter);
