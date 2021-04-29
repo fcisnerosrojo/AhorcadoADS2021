@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"Hangman App.Android.dll",
 		"FormsViewGroup.dll",
 		"Hangman App.dll",
+		"Newtonsoft.Json.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
 		"Xamarin.AndroidX.Annotation.Experimental.dll",

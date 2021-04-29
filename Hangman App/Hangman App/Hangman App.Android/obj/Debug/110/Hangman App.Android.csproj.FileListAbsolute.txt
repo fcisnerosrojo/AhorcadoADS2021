@@ -1200,3 +1200,4 @@ D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman 
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App.Android\obj\Debug\110\android\assets\Newtonsoft.Json.dll

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Hangman_App.Clases;
 
 namespace Hangman_App.Clases
 {
@@ -10,9 +11,12 @@ namespace Hangman_App.Clases
         //GETTERS & SETTERS
         public static int LivesLeft { get; set; }
         public static int Coins { get; set; }
+        public static int AmountWordsMatch { get; set; }
         public static char[] GuessingWord { get; set; }
         public static List<char> LettersSecretWord { get; set; }
         public static List<char> EnteredLetters { get; set; }
+        public static List<string> WordsMatch { get; set; }
+        
 
 
         public static void GenerateGuessingWord(string secretWord)
@@ -104,6 +108,23 @@ namespace Hangman_App.Clases
             Coins -= 1;
 
             return giftedLetter;
+        }
+
+
+        public static void SetWordsMatch()
+        {
+            WordsMatch = new List<string>(WordGenerator.WordGetterService(AmountWordsMatch));
+        }
+
+        public static string ChooseRandomWord()
+        {
+            int index = new Random().Next(WordsMatch.Count);
+
+            string secretWord = WordsMatch[index];
+
+            WordsMatch.Remove(secretWord);
+
+            return secretWord;
         }
     }
 }

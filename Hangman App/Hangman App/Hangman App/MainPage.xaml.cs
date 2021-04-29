@@ -6,6 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Hangman_App.Clases;
+using Hangman_App.Entidades;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Net;
+using System.IO;
 
 namespace Hangman_App
 {
@@ -73,8 +78,11 @@ namespace Hangman_App
         {
             Match.LivesLeft = 5;
             Match.Coins = 2;
+            Match.AmountWordsMatch = 3;
 
-            secretWord = WordGenerator.WordGetter();
+            Match.SetWordsMatch();
+
+            secretWord = Match.ChooseRandomWord();
             
             Match.GenerateGuessingWord(secretWord);
 
@@ -190,25 +198,9 @@ namespace Hangman_App
         }
 
 
-        private async void ConnectMicroService()
-        {
-            int cantPalabras = 5;
-
-            string url = $"http://127.0.0.1:5001/hangman/api/v1.0/match/{cantPalabras}";
-
-            var service = new HttpHelper<string>();
-
-            var secretWords = await service.GetRestServiceDataAsync(url);
-
-            DisplayAlert("JSON", "Hola: " + secretWord, "Ok");
-        }
-
-
         private void btnQuit_Clicked(object sender, EventArgs e)
         {
             Resetter();
-
-            ConnectMicroService();
         }
     }
 }
