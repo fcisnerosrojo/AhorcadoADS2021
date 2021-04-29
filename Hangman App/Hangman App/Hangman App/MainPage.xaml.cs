@@ -23,6 +23,8 @@ namespace Hangman_App
             Guess.IsEnabled = false;
 
             btnGift.IsEnabled = false;
+
+            btnQuit.IsEnabled = false;
         }
 
 
@@ -31,6 +33,8 @@ namespace Hangman_App
             if (Guess.Text.Length > 1 || Guess.Text.Length == 0)
             {
                 DisplayAlert("Datos erróneos", "Debe ingresar solo una letra", "Ok");
+
+                Guess.Text = "";
             }
             else
             {
@@ -84,6 +88,7 @@ namespace Hangman_App
             btnPlay.IsEnabled = false;
             btnGift.IsEnabled = true;
             btnGuess.IsEnabled = true;
+            btnQuit.IsEnabled = true;
 
             Guess.Focus();
             Guess.IsEnabled = true;
@@ -144,8 +149,6 @@ namespace Hangman_App
                 lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
 
                 Guess.Text = "";
-
-                //Guess.Focus();
             }
         }
 
@@ -178,6 +181,7 @@ namespace Hangman_App
             Guess.IsEnabled = false;
 
             btnGift.IsEnabled = false;
+            btnQuit.IsEnabled = false;
 
             lblVidasRestantes.Text = "Vidas Restantes: ";
             lblMonedasRestantes.Text = "Monedas Restantes: ";
@@ -186,6 +190,9 @@ namespace Hangman_App
         }
 
 
-        
+        private void btnQuit_Clicked(object sender, EventArgs e)
+        {
+            Resetter();
+        }
     }
 }

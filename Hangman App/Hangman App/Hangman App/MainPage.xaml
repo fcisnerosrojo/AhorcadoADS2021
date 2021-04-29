@@ -6,14 +6,14 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.5*"/>
-            <RowDefinition Height="0.4*"/>
-            <RowDefinition Height="0.7*"/>
-            <RowDefinition Height="0.9*"/>
-            <RowDefinition Height="0.8*"/>
-            <RowDefinition Height="0.8*"/>
-            <RowDefinition Height="0.8*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.6*"/>  <!--FILA 0-->
+            <RowDefinition Height="0.4*"/>  <!--FILA 1-->
+            <RowDefinition Height="0.7*"/>  <!--FILA 2-->
+            <RowDefinition Height="1.1*"/>  <!--FILA 3--> 
+            <RowDefinition Height="0.8*"/>  <!--FILA 4-->
+            <RowDefinition Height="0.8*"/>  <!--FILA 5-->
+            <RowDefinition Height="0.8*"/>  <!--FILA 6-->
+            <RowDefinition Height="0.8*"/>     <!--FILA 7-->
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -21,88 +21,141 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        
-        <Image Source="htitle" BackgroundColor="Black"
-               Grid.Row="0" Grid.ColumnSpan="2"
+        <!--    FILA 0  -->
+        <Image Grid.Row="0" Grid.ColumnSpan="2"
+               Source="htitle" 
+               BackgroundColor="Black"
                Aspect="AspectFit"/>
 
-        
-        <Label Text="Adivine la siguiente palabra:" HorizontalTextAlignment="Start"
-               VerticalTextAlignment="Center"
+
+        <!--    FILA 1  -->
+        <Label Grid.Row="1" Grid.ColumnSpan="2"
+               Text="Adivine la siguiente palabra:" 
                FontSize="20" FontAttributes="Bold"
-               Grid.Row="1" Grid.ColumnSpan="2"
+               HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
                Padding="10,5,5,5">
         </Label>
 
-        
-        <Label Text="_ _ _ _" HorizontalTextAlignment="Center" 
-               VerticalTextAlignment="Center"
+
+        <!--    FILA 2  -->
+        <Label Grid.Row="2" Grid.ColumnSpan="2"
+               Text="_ _ _ _" 
                FontSize="25" FontAttributes="Bold"
-               Grid.Row="2" Grid.ColumnSpan="2"
+               HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+
                x:Name="lblSecretWord">
         </Label>
 
-        
-        <Frame BackgroundColor="Black" Padding="10" CornerRadius="10" Margin="10"
-               Grid.Row="3" Grid.Column="0">
+
+        <!--    FILA 3  -->
+        <Frame Grid.Row="3" Grid.Column="0"
+               Margin="10" Padding="10"
+               CornerRadius="10" 
+               BackgroundColor="Black">
 
             <Label Text="Vidas Restantes:"
-                   FontSize="18" FontAttributes="Bold"
-                   TextColor="White" HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
-                   x:Name="lblVidasRestantes">
+                   FontSize="19" FontAttributes="Bold"
+                   TextColor="White" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                    
+                   x:Name="lblVidasRestantes">
             </Label>
+            
         </Frame>
-
-        <Frame BackgroundColor="Black" Padding="10" CornerRadius="10" Margin="10"
-               Grid.Row="3" Grid.Column="1">
+        
+        <Frame Grid.Row="3" Grid.Column="1"
+               Margin="10" Padding="10"
+               CornerRadius="10" 
+               BackgroundColor="Black">
 
             <Label Text="Monedas Restantes:"
-                   FontSize="18" FontAttributes="Bold"
-                   TextColor="White" HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"
+                   FontSize="19" FontAttributes="Bold"
+                   TextColor="White" 
+                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                   
                    x:Name="lblMonedasRestantes">
-                
             </Label>
+            
         </Frame>
 
-        
-        <Label Text="Letra a Ingresar:" Padding="10"
-               FontSize="20" FontAttributes="Bold"
-               Grid.Column="0" Grid.Row="4"
-               VerticalTextAlignment="Center">
+
+        <!--    FILA 4  -->
+        <Grid Grid.Row="4" Grid.ColumnSpan="2">
             
-        </Label>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <Entry x:Name="Guess"
-               Grid.Column="1" FontSize="20"
-               Grid.Row="4" Keyboard="Text"
-               VerticalTextAlignment="Center">
-               
-        </Entry>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width=".7*"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
 
-        
-        <Button Text="Guess" Grid.Column="0" Grid.Row="5"
-                Margin="15" FontSize="18"
+            <Label Grid.Column="0" Grid.Row="0"
+                   Padding="10"
+                   Text="Letra a Ingresar:" 
+                   FontSize="20" FontAttributes="Bold"
+                   VerticalTextAlignment="Center">
+            </Label>
+
+            <Entry Grid.Column="1" Grid.Row="0"
+                   FontSize="20"
+                   Keyboard="Text"
+                   VerticalTextAlignment="Center"
+                
+                   x:Name="Guess">
+            </Entry>
+
+            <Button Grid.Column="2" Grid.Row="0"
+                    Margin="15"
+                    Text="Guess" 
+                    FontSize="18"
+                    CornerRadius="5"
+                    
+                    Clicked="Button_Clicked_Guess"
+                    
+                    x:Name="btnGuess">
+            </Button>
+        </Grid>
+
+
+        <!--    FILA 5  -->
+        <Button Grid.Column="0" Grid.Row="5"
+                Margin="15" 
+                Text="Quit"
+                FontSize="18"
                 CornerRadius="5"
-                Clicked="Button_Clicked_Guess"
-                x:Name="btnGuess"></Button>
+                
+                Clicked="btnQuit_Clicked"
+                
+                x:Name="btnQuit">
+        </Button>
 
-        <Button Text="Play" Grid.Column="1" Grid.Row="5"
-                Margin="15" FontSize="18"
+        <Button Grid.Column="1" Grid.Row="5"
+                Margin="15" 
+                Text="Play" 
+                FontSize="18"
                 CornerRadius="5"
+                
                 Clicked="Button_Clicked_Play"
-                x:Name="btnPlay"></Button>
+                
+                x:Name="btnPlay">
+        </Button>
 
-        
-        <Button Text="Gift me a letter!" Grid.ColumnSpan="2" Grid.Row="6"
-                Margin="10" FontSize="18"
+
+        <!--    FILA 6  -->
+        <Button Grid.ColumnSpan="2" Grid.Row="6"
+                Margin="10" 
+                Text="Gift me a letter!"
+                FontSize="18"
                 CornerRadius="5"
                 WidthRequest="5"
+                
                 Clicked="btnGift_Clicked"
-                x:Name="btnGift"></Button>
-
+                
+                x:Name="btnGift">
+        </Button>
 
 
     </Grid>
