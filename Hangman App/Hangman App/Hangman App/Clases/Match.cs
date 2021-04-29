@@ -12,6 +12,7 @@ namespace Hangman_App.Clases
         public static int LivesLeft { get; set; }
         public static int Coins { get; set; }
         public static int AmountWordsMatch { get; set; }
+        public static int CurrentWord { get; set; }
         public static char[] GuessingWord { get; set; }
         public static List<char> LettersSecretWord { get; set; }
         public static List<char> EnteredLetters { get; set; }
@@ -114,7 +115,10 @@ namespace Hangman_App.Clases
         public static void SetWordsMatch()
         {
             WordsMatch = new List<string>(WordGenerator.WordGetterService(AmountWordsMatch));
+
+            CurrentWord = 1;
         }
+
 
         public static string ChooseRandomWord()
         {

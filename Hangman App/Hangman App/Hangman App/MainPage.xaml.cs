@@ -53,7 +53,7 @@ namespace Hangman_App
 
                     DisplayWord(new string(Match.GuessingWord));
 
-                    DisplayAlert("Exito!", "La letra '" + letraIngresada + "' esta contenida dentro de la palabra secreta!", "Ok");
+                    //DisplayAlert("Exito!", "La letra '" + letraIngresada + "' esta contenida dentro de la palabra secreta!", "Ok");
                 }
                 else if (!(check))
                 {
@@ -82,13 +82,7 @@ namespace Hangman_App
 
             Match.SetWordsMatch();
 
-            secretWord = Match.ChooseRandomWord();
-            
-            Match.GenerateGuessingWord(secretWord);
-
-            Match.LettersSecretWord = new List<char>(secretWord.ToCharArray());
-
-            DisplayWord(new string(Match.GuessingWord));
+            PrepareSecretWord();
 
             lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
             lblMonedasRestantes.Text = "Monedas Restantes: " + Match.Coins.ToString();
@@ -146,7 +140,15 @@ namespace Hangman_App
         {
             if (Match.CheckWin())
             {
-                Won();
+                if (Match.CurrentWord == Match.AmountWordsMatch)
+                {
+                    Won();
+                }
+                else
+                {
+                    Resume();
+                }
+                
             }
             else if (Match.LivesLeft == 0)
             {
@@ -158,6 +160,32 @@ namespace Hangman_App
 
                 Guess.Text = "";
             }
+        }
+
+
+        private void Resume()
+        {
+            DisplayAlert("Felicidades!", "Adivinaste la palabra: " + secretWord, "Great!");
+
+            Match.CurrentWord += 1;
+
+            Guess.Text = "";
+
+            PrepareSecretWord();
+        }
+
+
+        private void PrepareSecretWord()
+        {
+            secretWord = Match.ChooseRandomWord();
+
+            Match.GenerateGuessingWord(secretWord);
+
+            Match.LettersSecretWord = new List<char>(secretWord.ToCharArray());
+
+            DisplayWord(new string(Match.GuessingWord));
+
+            lblCurrentMatch.Text = "Palabra " + Match.CurrentWord + " de " + Match.AmountWordsMatch;
         }
 
 
@@ -193,6 +221,7 @@ namespace Hangman_App
 
             lblVidasRestantes.Text = "Vidas Restantes: ";
             lblMonedasRestantes.Text = "Monedas Restantes: ";
+            lblCurrentMatch.Text = "";
 
             btnPlay.Focus();
         }
