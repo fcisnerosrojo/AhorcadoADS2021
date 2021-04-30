@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, abort
-from WordReader import getWord, getMultiplesWords
+from WordReader import getMultiplesWords
 
 app = Flask(__name__)
 
