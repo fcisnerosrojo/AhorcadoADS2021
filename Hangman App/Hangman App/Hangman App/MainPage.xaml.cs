@@ -30,6 +30,8 @@ namespace Hangman_App
             btnGift.IsEnabled = false;
 
             btnQuit.IsEnabled = false;
+
+            Match.DefaultSettings = true;
         }
 
 
@@ -76,21 +78,25 @@ namespace Hangman_App
 
         private void Button_Clicked_Play(object sender, EventArgs e)
         {
-            Match.LivesLeft = 5;
-            Match.Coins = 2;
-            Match.AmountWordsMatch = 3;
+            if (Match.DefaultSettings == true)
+            {
+                Match.LivesLeft = 5;
+                Match.Coins = 2;
+                Match.AmountWordsMatch = 3;
+            }
 
             Match.SetWordsMatch();
 
             PrepareSecretWord();
 
-            lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
+            lblVidasRestantes.Text = "Vidas     Restantes: " + Match.LivesLeft.ToString();
             lblMonedasRestantes.Text = "Monedas Restantes: " + Match.Coins.ToString();
 
             btnPlay.IsEnabled = false;
             btnGift.IsEnabled = true;
             btnGuess.IsEnabled = true;
             btnQuit.IsEnabled = true;
+            btnSettings.IsEnabled = false;
 
             Guess.Focus();
             Guess.IsEnabled = true;
@@ -156,7 +162,7 @@ namespace Hangman_App
             }
             else
             {
-                lblVidasRestantes.Text = "Vidas Restantes: " + Match.LivesLeft.ToString();
+                lblVidasRestantes.Text = "Vidas     Restantes: " + Match.LivesLeft.ToString();
 
                 Guess.Text = "";
             }
@@ -218,8 +224,9 @@ namespace Hangman_App
 
             btnGift.IsEnabled = false;
             btnQuit.IsEnabled = false;
+            btnSettings.IsEnabled = true;
 
-            lblVidasRestantes.Text = "Vidas Restantes: ";
+            lblVidasRestantes.Text = "Vidas     Restantes: ";
             lblMonedasRestantes.Text = "Monedas Restantes: ";
             lblCurrentMatch.Text = "";
 
@@ -230,6 +237,12 @@ namespace Hangman_App
         private void btnQuit_Clicked(object sender, EventArgs e)
         {
             Resetter();
+        }
+
+
+        private void btnSettings_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MatchSettings());
         }
     }
 }

@@ -13,6 +13,7 @@ namespace Hangman_App.Clases
         public static int Coins { get; set; }
         public static int AmountWordsMatch { get; set; }
         public static int CurrentWord { get; set; }
+        public static bool DefaultSettings { get; set; }
         public static char[] GuessingWord { get; set; }
         public static List<char> LettersSecretWord { get; set; }
         public static List<char> EnteredLetters { get; set; }

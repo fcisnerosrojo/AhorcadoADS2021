@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hangman_App.MatchSettings"
+             Title="Match Settings"
+             Visual="Material">
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+
+            <!-- Ingreso de las Vidas -->
+            <Entry Placeholder="Cantidad de Vidas" 
+               x:Name="Vidas"
+               Keyboard="Numeric"
+               Margin="10"/>
+
+            <!-- Ingreso de las Monedas -->
+            <Entry Placeholder="Cantidad de Monedas" 
+               x:Name="Monedas"
+               Keyboard="Numeric"
+               Margin="10"/>
+
+            <!-- Ingreso de cantidad de palabras para la partida -->
+            <Entry Placeholder="Cantidad de Palabras" 
+               x:Name="CantPalabras"
+               Keyboard="Numeric"
+               Margin="10"
+               />
+
+
+            <Button 
+                Margin="20,10" HorizontalOptions="Center" WidthRequest="300" HeightRequest="50"
+                Text="Confirmar"
+                FontSize="18"
+                CornerRadius="50"
+                
+                Clicked="btnConfirmar_Clicked"
+                
+                x:Name="btnConfirmar">
+            </Button>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

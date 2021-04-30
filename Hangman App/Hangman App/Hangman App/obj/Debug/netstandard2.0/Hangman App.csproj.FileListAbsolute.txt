@@ -26,3 +26,4 @@ D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman 
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.dll
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\ref\Hangman App.dll
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.pdb
+D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\MatchSettings.xaml.g.cs

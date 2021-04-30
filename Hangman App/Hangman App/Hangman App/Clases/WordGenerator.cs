@@ -40,6 +40,20 @@ namespace Hangman_App.Clases
         //    return secretWord;
         //}
 
+        //public static List<string> WordGetterService(int cantPalabras)
+        //{
+        //    List<string> secretWords = new List<string>();
+
+        //    List<SecretWord> response = Services.GetSecretWordsService(cantPalabras);
+
+        //    foreach (var item in response)
+        //    {
+        //        secretWords.Add(item.word);
+        //    }
+
+        //    return secretWords;
+        //}
+
         public static List<string> WordGetterService(int cantPalabras)
         {
             List<string> secretWords = new List<string>();

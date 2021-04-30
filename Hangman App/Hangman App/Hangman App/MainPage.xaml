@@ -2,18 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hangman_App.MainPage"
-             Visual="Material">
+             Visual="Material"
+             
+             >
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.6*"/>  <!--FILA 0-->
             <RowDefinition Height="0.6*"/>  <!--FILA 1-->
-            <RowDefinition Height="0.7*"/>  <!--FILA 2-->
+            <RowDefinition Height="0.5*"/>  <!--FILA 2-->
             <RowDefinition Height="1.1*"/>  <!--FILA 3--> 
             <RowDefinition Height="0.8*"/>  <!--FILA 4-->
-            <RowDefinition Height="0.8*"/>  <!--FILA 5-->
-            <RowDefinition Height="0.8*"/>  <!--FILA 6-->
-            <RowDefinition Height="0.6*"/>     <!--FILA 7-->
+            <RowDefinition Height="0.7*"/>  <!--FILA 5-->
+            <RowDefinition Height="0.7*"/>  <!--FILA 6-->
+            <RowDefinition Height="0.8*"/>     <!--FILA 7-->
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -74,7 +76,7 @@
                CornerRadius="10" 
                BackgroundColor="Black">
 
-            <Label Text="Vidas Restantes:"
+            <Label Text="Vidas     Restantes:"
                    FontSize="19" FontAttributes="Bold"
                    TextColor="White" 
                    HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
@@ -143,7 +145,7 @@
 
         <!--    FILA 5  -->
         <Button Grid.Column="0" Grid.Row="5"
-                Margin="20,15" 
+                Margin="20,10" 
                 Text="Quit"
                 FontSize="18"
                 CornerRadius="5"
@@ -154,7 +156,7 @@
         </Button>
 
         <Button Grid.Column="1" Grid.Row="5"
-                Margin="20,15" 
+                Margin="20,10" 
                 Text="Play" 
                 FontSize="18"
                 CornerRadius="5"
@@ -178,6 +180,18 @@
                 x:Name="btnGift">
         </Button>
 
+        <!--    FILA 7  -->
+        <Button Grid.ColumnSpan="2" Grid.Row="7"
+                Margin="20,5,20,20"
+                Text="Settings"
+                FontSize="18"
+                CornerRadius="5"
+                WidthRequest="5"
+                
+                Clicked="btnSettings_Clicked"
+                
+                x:Name="btnSettings">
+        </Button>
 
     </Grid>
 

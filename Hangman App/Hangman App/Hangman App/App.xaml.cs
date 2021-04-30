@@ -10,7 +10,19 @@ namespace Hangman_App
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+
+            //MainPage = new NavigationPage(new MainPage());
+
+            var pageOne = new MainPage();
+
+            NavigationPage.SetHasNavigationBar(pageOne, false);
+
+            NavigationPage myPage = new NavigationPage(pageOne);
+
+            myPage.BarBackgroundColor = Color.Black;
+
+            MainPage = myPage;
         }
 
         protected override void OnStart()
