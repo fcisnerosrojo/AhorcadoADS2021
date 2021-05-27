@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hangman_App.MainMenu"
+             Title="Main Menu"
+             Visual="Material">
+
+    <StackLayout BackgroundColor="Black">
+        <Image 
+               Source="htitle" 
+               BackgroundColor="Black"
+               Aspect="AspectFit"
+               HeightRequest="150"/>
+
+        <Button 
+                Margin="20,30" 
+                Text="Single player" 
+                FontSize="24"
+                TextColor="Black"
+                BackgroundColor="White"
+                CornerRadius="15"
+                HeightRequest="130"
+                
+                Clicked="btnSingleplayer_Clicked"
+                
+                x:Name="btnSingleplayer">
+        </Button>
+
+        <Button 
+                Margin="20,30" 
+                Text="VS Mode" 
+                FontSize="24"
+                TextColor="Black"
+                BackgroundColor="White"
+                CornerRadius="15"
+                HeightRequest="130"
+                
+                Clicked="btnVS_Clicked"
+                
+                x:Name="btnVS">
+        </Button>
+
+    </StackLayout>
+
+</ContentPage>

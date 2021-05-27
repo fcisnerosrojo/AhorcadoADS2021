@@ -29,8 +29,6 @@ namespace Hangman_App
 
             btnGift.IsEnabled = false;
 
-            btnQuit.IsEnabled = false;
-
             Match.DefaultSettings = true;
         }
 
@@ -223,7 +221,6 @@ namespace Hangman_App
             Guess.IsEnabled = false;
 
             btnGift.IsEnabled = false;
-            btnQuit.IsEnabled = false;
             btnSettings.IsEnabled = true;
 
             lblVidasRestantes.Text = "Vidas     Restantes: ";
@@ -236,7 +233,9 @@ namespace Hangman_App
 
         private void btnQuit_Clicked(object sender, EventArgs e)
         {
-            Resetter();
+            //Resetter();
+
+            Navigation.PopAsync();
         }
 
 
@@ -244,5 +243,6 @@ namespace Hangman_App
         {
             Navigation.PushAsync(new MatchSettings());
         }
+
     }
 }

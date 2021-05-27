@@ -1189,11 +1189,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\Hangman App.iOS.csproj",
+      "projectUniqueName": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\Hangman App.iOS.csproj",
       "projectName": "Hangman App.iOS",
-      "projectPath": "D:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\Hangman App.iOS.csproj",
+      "projectPath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\Hangman App.iOS.csproj",
       "packagesPath": "C:\\Users\\nikom\\.nuget\\packages\\",
-      "outputPath": "D:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\obj\\",
+      "outputPath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1214,8 +1214,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj": {
-              "projectPath": "D:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj"
+            "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj": {
+              "projectPath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj"
             }
           }
         }

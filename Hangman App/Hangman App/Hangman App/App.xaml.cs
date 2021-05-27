@@ -14,7 +14,17 @@ namespace Hangman_App
 
             //MainPage = new NavigationPage(new MainPage());
 
-            var pageOne = new MainPage();
+            //var pageOne = new MainPage();
+
+            //NavigationPage.SetHasNavigationBar(pageOne, false);
+
+            //NavigationPage myPage = new NavigationPage(pageOne);
+
+            //myPage.BarBackgroundColor = Color.Black;
+
+            //MainPage = myPage;
+
+            var pageOne = new MainMenu();
 
             NavigationPage.SetHasNavigationBar(pageOne, false);
 

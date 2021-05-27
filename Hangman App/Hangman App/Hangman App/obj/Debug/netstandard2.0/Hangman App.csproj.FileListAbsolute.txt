@@ -27,3 +27,19 @@ D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman 
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\ref\Hangman App.dll
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.pdb
 D:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\MatchSettings.xaml.g.cs
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\bin\Debug\netstandard2.0\Hangman App.deps.json
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\bin\Debug\netstandard2.0\Hangman App.dll
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\bin\Debug\netstandard2.0\ref\Hangman App.dll
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\bin\Debug\netstandard2.0\Hangman App.pdb
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.csprojAssemblyReference.cache
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\App.xaml.g.cs
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\MatchSettings.xaml.g.cs
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.AssemblyInfoInputs.cache
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.AssemblyInfo.cs
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.csproj.CoreCompileInputs.cache
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\XamlC.stamp
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.dll
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\ref\Hangman App.dll
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\Hangman App.pdb
+F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Hangman App\Hangman App\Hangman App\obj\Debug\netstandard2.0\MainMenu.xaml.g.cs

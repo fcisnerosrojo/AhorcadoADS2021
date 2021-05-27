@@ -18,6 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="MainMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="MatchSettings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

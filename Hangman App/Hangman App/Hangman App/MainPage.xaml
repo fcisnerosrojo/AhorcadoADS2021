@@ -2,20 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hangman_App.MainPage"
+             Title="Singleplayer"
              Visual="Material"
              
              >
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1.6*"/>  <!--FILA 0-->
+            <RowDefinition Height="1*"/>  <!--FILA 0-->
             <RowDefinition Height="0.6*"/>  <!--FILA 1-->
-            <RowDefinition Height="0.5*"/>  <!--FILA 2-->
+            <RowDefinition Height="0.4*"/>  <!--FILA 2-->
             <RowDefinition Height="1.1*"/>  <!--FILA 3--> 
             <RowDefinition Height="0.8*"/>  <!--FILA 4-->
             <RowDefinition Height="0.7*"/>  <!--FILA 5-->
             <RowDefinition Height="0.7*"/>  <!--FILA 6-->
             <RowDefinition Height="0.8*"/>     <!--FILA 7-->
+            <RowDefinition Height="0.5*"/>
+            <!--FILA 8-->
+
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -24,10 +28,17 @@
         </Grid.ColumnDefinitions>
 
         <!--    FILA 0  -->
-        <Image Grid.Row="0" Grid.ColumnSpan="2"
-               Source="htitle" 
+        <Frame Grid.Row="0" Grid.ColumnSpan="2"
                BackgroundColor="Black"
-               Aspect="AspectFit"/>
+               CornerRadius="0">
+            <Label
+                Text="SINGLE PLAYER"
+                TextColor="White"
+                FontSize="24" FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Margin="10"/>
+        </Frame>
 
 
         <!--    FILA 1  -->
