@@ -8,29 +8,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Hangman_App.MainMenu.xaml", "MainMenu.xaml", typeof(global::Hangman_App.MainMenu))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Hangman_App.LevelsPage.xaml", "LevelsPage.xaml", typeof(global::Hangman_App.LevelsPage))]
 
 namespace Hangman_App {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("MainMenu.xaml")]
-    public partial class MainMenu : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("LevelsPage.xaml")]
+    public partial class LevelsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnSingleplayer;
+        private global::Xamarin.Forms.Entry txtNivel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnVS;
+        private global::Xamarin.Forms.Entry txtDificultad;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnNiveles;
+        private global::Xamarin.Forms.Button btnConfirmar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainMenu));
-            btnSingleplayer = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnSingleplayer");
-            btnVS = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnVS");
-            btnNiveles = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnNiveles");
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LevelsPage));
+            txtNivel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtNivel");
+            txtDificultad = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "txtDificultad");
+            btnConfirmar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnConfirmar");
         }
     }
 }

@@ -14,12 +14,12 @@ using System.IO;
 
 namespace Hangman_App
 {
-    public partial class MainPage : ContentPage
+    public partial class SingleplayerPage : ContentPage
     {
         string secretWord;
 
 
-        public MainPage()
+        public SingleplayerPage()
         {
             InitializeComponent();
 
@@ -52,8 +52,6 @@ namespace Hangman_App
                     Match.RecorrerGuessingWord(letraIngresada);
 
                     DisplayWord(new string(Match.GuessingWord));
-
-                    //DisplayAlert("Exito!", "La letra '" + letraIngresada + "' esta contenida dentro de la palabra secreta!", "Ok");
                 }
                 else if (!(check))
                 {

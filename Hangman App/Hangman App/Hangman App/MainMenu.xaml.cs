@@ -24,8 +24,15 @@ namespace Hangman_App
 
         private void btnSingleplayer_Clicked(object sender, EventArgs e)
         {
-            var page = new MainPage();
+            var page = new SingleplayerPage();
             NavigationPage.SetHasNavigationBar(page, false);
+
+            Navigation.PushAsync(page);
+        }
+
+        private void btnNiveles_Clicked(object sender, EventArgs e)
+        {
+            var page = new LevelsPage();
 
             Navigation.PushAsync(page);
         }

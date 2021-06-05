@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hangman_App.LevelsPage"
+             Visual="Material">
+
+    <StackLayout>
+        <Frame HeightRequest="100"
+               BackgroundColor="Black"
+               CornerRadius="0">
+            <Label
+                Text="NIVELES"
+                TextColor="White"
+                FontSize="24" FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Margin="10"/>
+        </Frame>
+
+        <Entry Placeholder="Nivel a agregar" 
+               x:Name="txtNivel"
+               Keyboard="Text"
+               Margin="10"/>
+
+        <Entry Placeholder="Dificultad" 
+               x:Name="txtDificultad"
+               Keyboard="Text"
+               Margin="10"/>
+
+        <Button 
+                Margin="20,10" HorizontalOptions="Center" HeightRequest="90" WidthRequest="250"
+                Text="Confirmar"
+                FontSize="18"
+                CornerRadius="50"
+                
+                Clicked="btnConfirmar_Clicked"
+                
+                x:Name="btnConfirmar">
+        </Button>
+    </StackLayout>
+    
+</ContentPage>

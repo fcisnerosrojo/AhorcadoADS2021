@@ -5,6 +5,8 @@ using System.Text;
 using Hangman_App.Entidades;
 using System.Net;
 using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Hangman_App.Clases
 {
