@@ -27,3 +27,7 @@ sabana
 almohada
 parlante
 arma
+lampara
+auto
+bicicleta
+sillon
