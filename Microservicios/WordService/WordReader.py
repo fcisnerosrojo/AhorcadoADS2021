@@ -4,7 +4,7 @@ import random
 
 def getMultiplesWords(amount):
 
-    path = '.\WordService\DataBase\words.txt'
+    path = ".\WordService\DataBase\levels.txt"
 
     with open(path) as file:
 
@@ -27,7 +27,7 @@ def getMultiplesWords(amount):
 
 def loadWord(word):
     
-    path = '.\WordService\DataBase\words.txt'
+    path = ".\WordService\DataBase\levels.txt"
 
     my_file = open(path, "a")
 

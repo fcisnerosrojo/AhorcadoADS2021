@@ -2226,11 +2226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.Android\\Hangman App.Android.csproj",
+      "projectUniqueName": "F:\\Facultad\\ASW\\Repositorio_GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.Android\\Hangman App.Android.csproj",
       "projectName": "Hangman App.Android",
-      "projectPath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.Android\\Hangman App.Android.csproj",
+      "projectPath": "F:\\Facultad\\ASW\\Repositorio_GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.Android\\Hangman App.Android.csproj",
       "packagesPath": "C:\\Users\\nikom\\.nuget\\packages\\",
-      "outputPath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.Android\\obj\\",
+      "outputPath": "F:\\Facultad\\ASW\\Repositorio_GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2251,8 +2251,8 @@
       "frameworks": {
         "monoandroid11.0": {
           "projectReferences": {
-            "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj": {
-              "projectPath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj"
+            "F:\\Facultad\\ASW\\Repositorio_GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj": {
+              "projectPath": "F:\\Facultad\\ASW\\Repositorio_GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj"
             }
           }
         }

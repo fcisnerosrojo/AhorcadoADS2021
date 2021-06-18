@@ -2,13 +2,12 @@ from enum import auto
 from os import remove
 from flask import Flask, jsonify, abort, request
 from flask.helpers import make_response
-from WordReader import sendLevel
+from WordReader import sendLevel, insertLevel
 import requests
 import urllib
 import json
 import re
 import time
-import schedule
 
 # Se crea la app
 app = Flask(__name__)
@@ -21,35 +20,25 @@ HOST = '0.0.0.0'
 
 
 # ...GET METHOD...
-@app.route("/")
+@app.route("/hangman/api/v1.0/level/send/")
 
-# Metodo de prueba que indicaria la pagina principal
-def home():
-    return "<h1 style='color:blue'> This is home!!</h1>"
+def sender():
+
+    # Se invoca el metodo para enviar el level correspondiente al WordService
+    res = sendLevel()
+
+    return res
 
 
 
 # ...POST METHOD...
-@app.route("/level/", methods=["POST"])
+@app.route("/hangman/api/v1.0/level/", methods=["POST"])
 
 def createLevel():
     # convierte el JSON en un objeto de tipo "dictionary"
     levels = request.get_json()
 
-    path = '.\LevelsService\DataBase\levels.txt'
-
-    my_file = open(path, "a")
-
-    for word in levels:
-        pal = levels[word]
-        my_file.write(pal + "\n")
-
-    my_file.close()
-
-    # se envia el nivel al microservicio "WordService"
-    res = sendLevel()
-
-    res = make_response(jsonify({"message":"level añadido"}),201)
+    res = insertLevel(levels)
 
     return res
 

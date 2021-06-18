@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pF/d+YZjvbYyBbzNjVrJXDO3CxSvcBprx4yhLuVXmCUziefNpSHsILDb1cAp4vD65t7wm/+MJQGRXQcwEfqFHA==",
+  "dgSpecHash": "evWGYNMJQds6bmTDBxRKF9vR2LZi6/Qu86L40PCje5d57PWEmD7d4xqLaQRaeB5ZnAMDtkHL45AStfgnpXK0/A==",
   "success": true,
-  "projectFilePath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\Hangman App.iOS.csproj",
+  "projectFilePath": "F:\\Facultad\\ASW\\Repositorio_GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App.iOS\\Hangman App.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nikom\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\nikom\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

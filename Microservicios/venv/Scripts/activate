@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="F:\Facultad\ASW\Repositorio GIT\AhorcadoADS2021\Microservicios\venv"
+VIRTUAL_ENV="F:\Facultad\ASW\Repositorio_GIT\AhorcadoADS2021\Microservicios\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

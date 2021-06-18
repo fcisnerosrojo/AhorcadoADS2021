@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SOtfMfzw12frDPZKDcxSbPmVW6yh6nYJZ+jUZpOHgbhjM5xpb+MKDaV17oAJ8/6ppaE4QRdhAVnPRl8zEcNnjQ==",
+  "dgSpecHash": "GJMBEE4kiYqDiqSSj/zpvmy0c+gyE7vPNd7ugdP+vLer+GA5uQRR6ER8BfBdtik2cCAqVDwQk6V9AmBANTzRsg==",
   "success": true,
-  "projectFilePath": "F:\\Facultad\\ASW\\Repositorio GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj",
+  "projectFilePath": "F:\\Facultad\\ASW\\Repositorio_GIT\\AhorcadoADS2021\\Hangman App\\Hangman App\\Hangman App\\Hangman App.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nikom\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\nikom\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
