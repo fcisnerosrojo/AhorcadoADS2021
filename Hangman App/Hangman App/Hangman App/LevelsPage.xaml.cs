@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Hangman_App.Clases;
 
 namespace Hangman_App
 {
@@ -19,15 +20,29 @@ namespace Hangman_App
             txtDificultad.IsEnabled = false;
         }
 
-        private void btnConfirmar_Clicked(object sender, EventArgs e)
+        private async void btnConfirmar_Clicked(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtNivel.Text) /*&& !string.IsNullOrEmpty(txtDificultad.Text)*/)
             {
-                DisplayAlert("Work in progress...", "Esta funcionalidad esta en desarrollo", "Ok");
+                string nivel = txtNivel.Text;
+
+                Clases.HttpHelper<string> cliente = new HttpHelper<string>();
+
+                string res = await cliente.sendLevelAsync(nivel);
+
+                await DisplayAlert("Respuesta", res, "Ok");
+
+                if (res != null)
+                {
+                    await DisplayAlert("Respuesta", "Nivel añadido!", "Ok");
+                }
+                
+                txtNivel.Text = "";
+                txtNivel.Focus();
             }
             else
             {
-                DisplayAlert("Error", "Ingrese todos los campos", "Ok");
+                await DisplayAlert ("Error", "Ingrese todos los campos", "Ok");
             }
             
         }

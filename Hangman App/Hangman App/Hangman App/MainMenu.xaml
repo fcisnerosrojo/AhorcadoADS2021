@@ -7,55 +7,68 @@
 
     <ScrollView>
         <StackLayout BackgroundColor="Black">
-            <Image 
-               Source="htitle" 
-               BackgroundColor="Black"
-               Aspect="AspectFit"
-               HeightRequest="150"/>
+           
 
-            <Button 
-                Margin="20,30" 
-                Text="Single player" 
-                FontSize="24"
-                TextColor="Black"
-                BackgroundColor="White"
-                CornerRadius="15"
-                HeightRequest="100"
-                
-                Clicked="btnSingleplayer_Clicked"
-                
-                x:Name="btnSingleplayer">
-            </Button>
+            <Image Source="hangmanv2" Aspect="AspectFit"
+                   HeightRequest="150"
+                   VerticalOptions="Start"/>
 
-            <Button 
-                Margin="20,30" 
-                Text="VS Mode" 
-                FontSize="24"
-                TextColor="Black"
-                BackgroundColor="White"
-                CornerRadius="15"
-                HeightRequest="100"
-                
-                Clicked="btnVS_Clicked"
-                
-                x:Name="btnVS">
-            </Button>
+            <Frame BackgroundColor="#1F1F1F"  CornerRadius="40" Margin="20,20,20,0"
+                   HeightRequest="400">
+                <StackLayout>
 
-            <Button 
-                Margin="20,30" 
-                Text="Niveles" 
-                FontSize="24"
-                TextColor="Black"
-                BackgroundColor="White"
-                CornerRadius="15"
-                HeightRequest="100"
+                    <Button 
+                        Margin="30,40,30,30" 
+                        Text="Single player" 
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        CornerRadius="15"
+                        HeightRequest="60"
                 
-                Clicked="btnNiveles_Clicked"
+                        Clicked="btnSingleplayer_Clicked"
                 
-                x:Name="btnNiveles">
-            </Button>
+                        x:Name="btnSingleplayer">
+                    </Button>
+
+                    <Button 
+                        Margin="30" 
+                        Text="VS Mode" 
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        CornerRadius="15"
+                        HeightRequest="60"
+                
+                        Clicked="btnVS_Clicked"
+                
+                        x:Name="btnVS">
+                    </Button>
+
+                    <Button 
+                        Margin="30" 
+                        Text="Niveles" 
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="Black"
+                        BackgroundColor="White"
+                        CornerRadius="15"
+                        HeightRequest="60"
+                
+                        Clicked="btnNiveles_Clicked"
+                
+                        x:Name="btnNiveles">
+                    </Button>
+
+                </StackLayout>
+            </Frame>
+
+            
 
         </StackLayout>
+        
     </ScrollView>
     
 

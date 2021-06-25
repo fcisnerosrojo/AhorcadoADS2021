@@ -11,9 +11,13 @@ def insertLevel(levels):
 
     my_file = open(path, "a")
 
-    for word in levels:
-        pal = levels[word]
-        my_file.write(pal + "\n")
+    if type(levels) is dict:
+        for word in levels:
+            pal = levels[word]
+            my_file.write(pal + "\n")
+    else:
+        for pal in levels:
+            my_file.write(pal + "\n")
 
     my_file.close()
 

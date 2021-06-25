@@ -38,6 +38,9 @@ def createLevel():
     # convierte el JSON en un objeto de tipo "dictionary"
     levels = request.get_json()
 
+    if levels == None:
+        levels = request.form.getlist("word")
+
     res = insertLevel(levels)
 
     return res
